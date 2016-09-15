@@ -19,6 +19,7 @@
   <script src="https://checkout.stripe.com/checkout.js"></script>
     <%=hidden_field_tag 'stripeToken' %>
     <%=hidden_field_tag 'stripeEmail' %>
+    <%=hidden_field_tag 'amount', 800 %>
     <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>I want this!</button>
 
     <script>
@@ -39,8 +40,8 @@
         addEventListener('click', function(e) {
         handler.open({
           name: 'One Month',
-          descritption: 'Grow Hacking Crash Course (500¥)',
-          amount: 500
+          descritption: 'Grow Hacking Crash Course (800¥)',
+          amount: document.getElementById("amount").value
         });
         e.preventDefault();
       })
