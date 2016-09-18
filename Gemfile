@@ -25,6 +25,10 @@ gem 'figaro'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+#Add letter opener for handling emails in development
+gem 'letter_opener', group: :development
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
